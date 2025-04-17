@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1800</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Lab_Image_P">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>650</y>
+      <width>480</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="ImageLabelControl" name="Lab_Image_C">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>960</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>650</y>
+      <width>441</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="leftMargin">
+      <number>30</number>
+     </property>
+     <property name="rightMargin">
+      <number>30</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="horizontalSpacing">
+      <number>60</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>30</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="Btn_Save">
+       <property name="text">
+        <string>保存</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="Btn_Load">
+       <property name="text">
+        <string>加载</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="Btn_Open">
+       <property name="text">
+        <string>打开设备</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="Btn_Close">
+       <property name="text">
+        <string>关闭设备</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="Btn_Start">
+       <property name="text">
+        <string>开始采集</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="Btn_Quit">
+       <property name="text">
+        <string>停止采集</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>10</y>
+      <width>781</width>
+      <height>941</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <widget class="QWidget" name="tab_1">
+     <attribute name="title">
+      <string>标定</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>60</y>
+        <width>361</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>6</number>
+       </property>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="Btn_PointLeft">
+         <property name="text">
+          <string>Left</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="Btn_PointRight">
+         <property name="text">
+          <string>Right</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="Btn_PointUp">
+         <property name="text">
+          <string>Up</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="Btn_PointDown">
+         <property name="text">
+          <string>Down</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>60</y>
+        <width>171</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="Btn_PointRecord">
+         <property name="text">
+          <string>记录该点</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_PointDelone">
+         <property name="text">
+          <string>撤销一点</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_PointDelall">
+         <property name="text">
+          <string>全部撤销</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_PointCalib">
+         <property name="text">
+          <string>开始标定</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="Lab_PointSel">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>490</y>
+        <width>300</width>
+        <height>300</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>采色</string>
+     </attribute>
+     <widget class="ImageLabelEnlarge" name="Lab_ColorEnlarge">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>70</y>
+        <width>300</width>
+        <height>300</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>161</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Object</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>141</width>
+         <height>411</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="Sel_Team">
+          <property name="text">
+           <string>TEAM</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Mem1">
+          <property name="text">
+           <string>MEM1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Mem2">
+          <property name="text">
+           <string>MEM2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Mem3">
+          <property name="text">
+           <string>MEM3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Mem4">
+          <property name="text">
+           <string>MEM4</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Mem5">
+          <property name="text">
+           <string>MEM5</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Ball">
+          <property name="text">
+           <string>BALL</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_Opp">
+          <property name="text">
+           <string>OPP</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>70</y>
+        <width>161</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="Btn_Sampling">
+         <property name="text">
+          <string>采样</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_RePoints">
+         <property name="text">
+          <string>重新取点</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_ColorTest">
+         <property name="text">
+          <string>颜色测试</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_HSIcomplete">
+         <property name="text">
+          <string>完成确定</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="ImageLabelDrawI" name="Lab_ShowIdata">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>750</y>
+        <width>308</width>
+        <height>62</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="ImageLabelColor" name="Lab_ColorData">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>510</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="HSIslider" name="Sld_H_Low" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>470</y>
+        <width>220</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="HSIslider" name="Sld_H_High" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>530</y>
+        <width>220</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="HSIslider" name="Sld_S_Low" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>590</y>
+        <width>220</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="HSIslider" name="Sld_S_High" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>650</y>
+        <width>220</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="HSIslider" name="Sld_I_Low" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>710</y>
+        <width>220</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="HSIslider" name="Sld_I_High" native="true">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>770</y>
+        <width>220</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Lab_H_Low">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>470</y>
+        <width>67</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>H_L</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Lab_H_High">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>530</y>
+        <width>67</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>H_H</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Lab_S_Low">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>590</y>
+        <width>67</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>S_L</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Lab_S_High">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>650</y>
+        <width>67</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>S_H</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Lab_I_Low">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>710</y>
+        <width>67</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>I_L</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Lab_I_High">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>770</y>
+        <width>67</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>I_H</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>比赛</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>621</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>开球方</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>601</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="leftMargin">
+         <number>100</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="Sel_SelfAttack">
+          <property name="text">
+           <string>我方开球</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_OppAttack">
+          <property name="text">
+           <string>对方开球</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>150</y>
+        <width>621</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>半场选择</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>601</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="leftMargin">
+         <number>100</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="Sel_LeftGround">
+          <property name="text">
+           <string>左半场</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_RightGround">
+          <property name="text">
+           <string>右半场</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>280</y>
+        <width>621</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>比赛模式</string>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>601</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>60</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QRadioButton" name="Sel_GameMode1">
+          <property name="text">
+           <string>点球</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QRadioButton" name="Sel_GameMode0">
+          <property name="text">
+           <string>普通</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QRadioButton" name="Sel_GameMode2">
+          <property name="text">
+           <string>门球</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QRadioButton" name="Sel_GameMode3">
+          <property name="text">
+           <string>任意球</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QRadioButton" name="Sel_GameMode4">
+          <property name="text">
+           <string>争球</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QRadioButton" name="Sel_GameMode5">
+          <property name="text">
+           <string>收车</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>490</y>
+        <width>621</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>开始模式</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>30</y>
+         <width>601</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="leftMargin">
+         <number>100</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="Sel_BackInit">
+          <property name="text">
+           <string>归位</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_StartGame">
+          <property name="text">
+           <string>开始比赛</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>620</y>
+        <width>621</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>变量重复模式</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>601</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="leftMargin">
+         <number>100</number>
+        </property>
+        <item>
+         <widget class="QRadioButton" name="Sel_InitVar">
+          <property name="text">
+           <string>初始化</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="Sel_ContiVar">
+          <property name="text">
+           <string>继续使用</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>770</y>
+        <width>621</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>100</number>
+       </property>
+       <property name="leftMargin">
+        <number>25</number>
+       </property>
+       <property name="rightMargin">
+        <number>25</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="Btn_ToStart">
+         <property name="text">
+          <string>开始</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Btn_ToStop">
+         <property name="text">
+          <string>停止</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageLabelControl</class>
+   <extends>QLabel</extends>
+   <header location="global">ImageLabelControl.h</header>
+  </customwidget>
+  <customwidget>
+   <class>HSIslider</class>
+   <extends>QWidget</extends>
+   <header location="global">HSIslider.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ImageLabelEnlarge</class>
+   <extends>QLabel</extends>
+   <header location="global">ImageLabelEnlarge.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ImageLabelColor</class>
+   <extends>QLabel</extends>
+   <header location="global">ImageLabelColor.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ImageLabelDrawI</class>
+   <extends>QLabel</extends>
+   <header location="global">ImageLabelDrawI.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
